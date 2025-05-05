@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>InsertElement</title>
+    <script>
+    //   let arr = [10, 25, 27, 56, 0, 100];
+    //   console.log(arr.length);
+      
+    //   let newEl = 69;
+    //   let position = 2;
+    //   for (let i = arr.length - 1; i >= 0; i--) {
+    //     //console.warn(arr[i])
+    //     if (i >= position) {
+    //       arr[i + 1] = arr[i];
+    //       if (i == position) {
+    //         arr[i] = newEl;
+    //       }
+    //     }
+    // }
+    function InsertElement(){
+        let arr=[10,20,30,40,50,60,70,80,90,100]
+        let position=document.getElementById("position").value
+        let newEl=document.getElementById("newEl").value
+        newEl=parseInt(newEl)
+     
+      for (let i = arr.length - 1; i >= 0; i--) {
+        //console.warn(arr[i])
+        if (i >= position) {
+          arr[i + 1] = arr[i];
+          if (i == position) {
+            arr[i] = newEl;
+          }
+        }
+    }
+    console.log(arr);
+    
+    }
+    </script>
+  </head>
+  <body>
+
+    <input type="text" id="position" placeholder="Enter Position">
+    <br>
+    <input type="text" id="newEl" placeholder="Enter New Element">
+    <button onclick="InsertElement()">Submit</button>
+
+  </body>
+</html>
+
+<!-- JavaScript inBuilt function
+splice
+let arr=[10,20,30,40,50,60]
+arr.splice(2(jhaa add krna h),0(jo dlt krna h),2000(jisse add krna h)) -->
