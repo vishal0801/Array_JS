@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReverseArray</title>
+    <script>
+        let arr=[2,4,6,8,10,12,14,16,18]
+        let temp;
+        function ReverseArray(arr,start,end){
+            console.warn(arr);
+            if(start<=end){
+                temp=arr[start]
+                arr[start]=arr[end]
+                arr[end]=temp
+                ReverseArray(arr,start+1,end-1)
+            }
+        }
+        
+ReverseArray(arr,0,arr.length-1)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
