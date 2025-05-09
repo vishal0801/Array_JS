@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Push_Pop</title>
+    <script>
+        let arr=[]
+        let max=5
+        newval=document.getElementById('inputtext')
+        console.warn(newval);
+        
+        let currentsize=arr.length
+        function push(newval){
+            if(currentsize>=max){
+    alert("Stack is full you cant add new value"+newval);
+    
+            }
+            arr[currentsize]=newval
+            currentsize++
+        }
+        function pop(){
+          if(currentsize>1){
+            currentsize--
+            arr.length=currentsize
+          }
+          else{
+            alert("Stack is already empty")
+          }
+        }
+     
+
+
+        console.warn(arr);
+        
+    </script>
+</head>
+<body>
+    
+<input type="text" id="inputtext">
+<button onclick="push(newval)" id="push">PUSH</button>
+<button onclick="pop()" id="pop">POP</button>
+
+</body>
+</html>
