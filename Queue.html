@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Queue</title>
+    <script>
+      let queue = [];
+      let currentsize = queue.length;
+      let maxsize = 5;
+      function enqueue(newVal) {
+        if (currentsize >= maxsize) {
+          alert("Queue is already full");
+        } else {
+          queue[currentsize] = newVal;
+          currentsize++;
+        }
+      }
+      function display() {
+        console.warn(queue);
+      }
+      function dequeue(){
+        if(currentsize>0){
+            for(let i=0;i<queue.length;i++){
+                queue[i]=queue[i+1]
+            }     
+            currentsize--
+            queue.length=currentsize   
+        }
+        else{
+            alert("Stack is already empty")
+        }
+      }
+    //   enqueue(69);
+    //   display();
+    </script>
+  </head>
+  <body>
+    <h2>Queue in JS</h2>
+  </body>
+</html>
